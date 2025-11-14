@@ -45,6 +45,11 @@ main {
   background: none;
   flex-shrink: 0;
   cursor: pointer;
+  z-index: 9999;
+}
+
+.header__burger.header__burger--active span {
+  background-color: #ffffff;
 }
 
 .header__burger span {
