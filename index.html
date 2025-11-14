@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Test page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="header__logo-link">
+        <img class="header__logo" src="img/logo_glassgo.svg" alt="Логотип GlassGo" />
+      </a>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" aria-label="Основное меню">
+        <a href="#" class="header__nav-link">Компания</a>
+        <a href="#" class="header__nav-link">Продукты</a>
+        <a href="#" class="header__nav-link">Карьера</a>
+        <a href="#" class="header__nav-link">Медиа</a>
+        <a href="#" class="header__nav-link">Контакты</a>
+      </nav>
+
+      <form class="header__search" action="#" method="get" role="search">
+        <input
+          type="search"
+          name="q"
+          class="header__search-input"
+          placeholder="Поиск"
+          aria-label="Поиск по сайту"
+        />
+        <button class="header__search-icon" type="submit" aria-label="Найти">
+          <img src="img/zoom-in.svg" alt="Поиск" class="header__search-img" />
+        </button>
+      </form>
+
+      <ul class="header__social">
+        <li class="header__social-item">
+          <a href="#" class="header__social-link header__social-link--telegram" aria-label="Telegram"></a>
+        </li>
+        <li class="header__social-item">
+          <a href="#" class="header__social-link header__social-link--dzen" aria-label="Дзен"></a>
+        </li>
+        <li class="header__social-item">
+          <a href="#" class="header__social-link header__social-link--vk" aria-label="ВКонтакте"></a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="Мобильное меню">
+    <div class="mobile-menu__inner">
+      <div class="mobile-menu__top">
+        <img src="img/logo_glassgo-footer.svg" alt="GlassGo" class="mobile-menu__logo" />
+      </div>
+
+      <div class="mobile-menu__groups">
+        <div class="mobile-menu__group">
+          <button class="mobile-menu__group-toggle" type="button">
+            <span class="mobile-menu__group-title">Компания</span>
+            <span class="mobile-menu__arrow"></span>
+          </button>
+          <div class="mobile-menu__group-panel">
+            <a href="#" class="mobile-menu__link">О компании</a>
+            <a href="#" class="mobile-menu__link">Цели и стратегия</a>
+            <a href="#" class="mobile-menu__link">Видения и ценности</a>
+            <a href="#" class="mobile-menu__link">Команда</a>
+          </div>
+        </div>
+
+        <div class="mobile-menu__group">
+          <button class="mobile-menu__group-toggle" type="button">
+            <span class="mobile-menu__group-title">Продукты</span>
+            <span class="mobile-menu__arrow"></span>
+          </button>
+          <div class="mobile-menu__group-panel">
+            <a href="#" class="mobile-menu__link">Все продукты</a>
+            <a href="#" class="mobile-menu__link">Продукты для слабослышащих</a>
+            <a href="#" class="mobile-menu__link">Очки для туризма</a>
+            <a href="#" class="mobile-menu__link">Как помогают наши продукты</a>
+          </div>
+        </div>
+
+        <div class="mobile-menu__group">
+          <button class="mobile-menu__group-toggle" type="button">
+            <span class="mobile-menu__group-title">Карьера</span>
+            <span class="mobile-menu__arrow"></span>
+          </button>
+          <div class="mobile-menu__group-panel">
+            <a href="#" class="mobile-menu__link">Работа с нами</a>
+            <a href="#" class="mobile-menu__link">Вакансии</a>
+          </div>
+        </div>
+
+        <div class="mobile-menu__group">
+          <button class="mobile-menu__group-toggle" type="button">
+            <span class="mobile-menu__group-title">Контакты</span>
+            <span class="mobile-menu__arrow"></span>
+          </button>
+          <div class="mobile-menu__group-panel">
+            <a href="#" class="mobile-menu__link">Наши контакты</a>
+            <a href="#" class="mobile-menu__link">Партнерские магазины</a>
+            <a href="#" class="mobile-menu__link">Стать партнером</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu__bottom">
+        <span class="mobile-menu__copy">© 2024 GlassGo</span>
+        <div class="mobile-menu__bottom-links">
+          <a href="#" class="mobile-menu__bottom-link">Политика конфиденциальности</a>
+          <a href="#" class="mobile-menu__bottom-link">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a href="/" class="breadcrumbs__link">Главная</a>
+      <span class="breadcrumbs__separator">›</span>
+      <span class="breadcrumbs__current" aria-current="page">Блог и новости</span>
+    </nav>
+
+    <section class="blog" aria-labelledby="blog-title">
+      <div class="blog__header">
+        <h2 class="blog__title" id="blog-title">Блог</h2>
+        <a href="#" class="blog__more">
+          <span>Смотреть все</span>
+          <span class="blog__more-arrow"></span>
+        </a>
+      </div>
+
+      <div class="blog__grid">
+        <div class="blog__column blog__column--left">
+          <article class="blog-card blog-card--small">
+            <div class="blog-card__image-wrapper">
+              <img
+                src="img/article-image.jpg"
+                srcset="img/article-image_2x.jpg"
+                alt="Обложка статьи"
+                class="blog-card__image"
+              />
+            </div>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">27.02.24</span>
+              <a href="#" class="blog-card__source">dzen.ru</a>
+            </div>
+            <h3 class="blog-card__title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+            <p class="blog-card__text">
+              Рассмотрим более подробно, с какими именно проблемами они сталкиваются
+              и как общество может помочь в их преодолении.
+            </p>
+          </article>
+
+          <article class="blog-card blog-card--small">
+            <div class="blog-card__image-wrapper">
+              <img
+                src="img/article-image.jpg"
+                srcset="img/article-image_2x.jpg"
+                alt="Обложка статьи"
+                class="blog-card__image"
+              />
+            </div>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">27.02.24</span>
+              <a href="#" class="blog-card__source">vk.ru</a>
+            </div>
+            <h3 class="blog-card__title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+            <p class="blog-card__text">
+              Рассмотрим более подробно, с какими именно проблемами они сталкиваются
+              и как общество может помочь в их преодолении.
+            </p>
+          </article>
+        </div>
+
+        <div class="blog__column blog__column--right">
+          <article class="blog-card blog-card--featured">
+            <div class="blog-card__featured-top">
+              <a href="#" class="blog-card__source blog-card__source--light">
+                dzen.ru
+              </a>
+            </div>
+
+            <h3 class="blog-card__featured-title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ<br />
+              СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+
+            <div class="blog-card__featured-bottom">
+              <span class="blog-card__featured-date">
+                27 февраля 2024
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog" aria-labelledby="news-title">
+      <div class="blog__header">
+        <h2 class="blog__title" id="news-title">Новости</h2>
+        <a href="#" class="blog__more">
+          <span>Смотреть все</span>
+          <span class="blog__more-arrow"></span>
+        </a>
+      </div>
+
+      <div class="blog__grid blog__grid--reverse">
+        <div class="blog__column blog__column--left blog__column--left-reverse">
+          <article class="blog-card blog-card--small">
+            <div class="blog-card__image-wrapper">
+              <img
+                src="img/article-image.jpg"
+                srcset="img/article-image_2x.jpg"
+                alt="Обложка статьи"
+                class="blog-card__image"
+              />
+            </div>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">27.02.24</span>
+              <a href="#" class="blog-card__source">dzen.ru</a>
+            </div>
+            <h3 class="blog-card__title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+            <p class="blog-card__text">
+              Рассмотрим более подробно, с какими именно проблемами они сталкиваются
+              и как общество может помочь в их преодолении.
+            </p>
+          </article>
+
+          <article class="blog-card blog-card--small">
+            <div class="blog-card__image-wrapper">
+              <img
+                src="img/article-image.jpg"
+                srcset="img/article-image_2x.jpg"
+                alt="Обложка статьи"
+                class="blog-card__image"
+              />
+            </div>
+            <div class="blog-card__meta">
+              <span class="blog-card__date">27.02.24</span>
+              <a href="#" class="blog-card__source">vk.ru</a>
+            </div>
+            <h3 class="blog-card__title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+            <p class="blog-card__text">
+              Рассмотрим более подробно, с какими именно проблемами они сталкиваются
+              и как общество может помочь в их преодолении.
+            </p>
+          </article>
+        </div>
+
+        <div class="blog__column blog__column--right blog__column--right-reverse">
+          <article class="blog-card blog-card--featured">
+            <div class="blog-card__featured-top">
+              <a href="#" class="blog-card__source blog-card__source--light">
+                dzen.ru
+              </a>
+            </div>
+
+            <h3 class="blog-card__featured-title">
+              ЖИЗНЬ В МИРЕ ТИШИНЫ: ПРОБЛЕМЫ И ВЫЗОВЫ<br />
+              СЛАБОСЛЫШАЩИХ ЛЮДЕЙ
+            </h3>
+
+            <div class="blog-card__featured-bottom">
+              <span class="blog-card__featured-date">
+                27 февраля 2024
+              </span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__logo">
+          <img src="img/logo_glassgo-footer.svg" alt="Логотип GlassGo" />
+        </div>
+
+        <nav class="footer__menus" aria-label="Меню в подвале">
+          <div class="footer-menu">
+            <button class="footer-menu__title" type="button">
+              <span>Компания</span>
+              <span class="footer-menu__arrow"></span>
+            </button>
+            <div class="footer-menu__body">
+              <a href="#" class="footer-menu__link">О компании</a>
+              <a href="#" class="footer-menu__link">Цели и стратегия</a>
+              <a href="#" class="footer-menu__link">Видения и ценности</a>
+              <a href="#" class="footer-menu__link">Команда</a>
+            </div>
+          </div>
+
+          <div class="footer-menu">
+            <button class="footer-menu__title" type="button">
+              <span>Продукты</span>
+              <span class="footer-menu__arrow"></span>
+            </button>
+            <div class="footer-menu__body">
+              <a href="#" class="footer-menu__link">Все продукты</a>
+              <a href="#" class="footer-menu__link">Продукты для слабослышащих</a>
+              <a href="#" class="footer-menu__link">Очки для туризма</a>
+              <a href="#" class="footer-menu__link">Как помогают наши продукты</a>
+            </div>
+          </div>
+
+          <div class="footer-menu">
+            <button class="footer-menu__title" type="button">
+              <span>Карьера</span>
+              <span class="footer-menu__arrow"></span>
+            </button>
+            <div class="footer-menu__body">
+              <a href="#" class="footer-menu__link">Работа с нами</a>
+              <a href="#" class="footer-menu__link">Вакансии</a>
+            </div>
+          </div>
+
+          <div class="footer-menu">
+            <button class="footer-menu__title" type="button">
+              <span>Медиа</span>
+              <span class="footer-menu__arrow"></span>
+            </button>
+            <div class="footer-menu__body">
+              <a href="#" class="footer-menu__link">Новости</a>
+              <a href="#" class="footer-menu__link">Блог</a>
+              <a href="#" class="footer-menu__link">Медиа</a>
+            </div>
+          </div>
+
+          <div class="footer-menu">
+            <button class="footer-menu__title" type="button">
+              <span>Контакты</span>
+              <span class="footer-menu__arrow"></span>
+            </button>
+            <div class="footer-menu__body">
+              <a href="#" class="footer-menu__link">Наши контакты</a>
+              <a href="#" class="footer-menu__link">Партнерские магазины</a>
+              <a href="#" class="footer-menu__link">Стать партнером</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="footer__contacts">
+          <div class="footer__social">
+            <a href="#" class="footer__social-link header__social-link--telegram-white" aria-label="Telegram"></a>
+            <a href="#" class="footer__social-link header__social-link--dzen-white" aria-label="Дзен"></a>
+            <a href="#" class="footer__social-link header__social-link--vk-white" aria-label="ВКонтакте"></a>
+          </div>
+
+          <div class="footer__contact-item">
+            <span class="footer__contact-icon"></span>
+            <a href="mailto:glassgopr@mail.ru" class="footer__contact-text">
+              glassgopr@mail.ru
+            </a>
+          </div>
+
+          <div class="footer__contact-item">
+            <span class="footer__phone-icon"></span>
+            <a href="tel:+79888888888" class="footer__contact-text">
+              +7 (988) 88-88-888
+            </a>
+          </div>
+
+          <a href="#" class="footer__support-link">
+            Поддержать развитие проекта
+          </a>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2024 GlassGo</span>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Политика конфиденциальности</a>
+          <a href="#" class="footer__bottom-link">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
